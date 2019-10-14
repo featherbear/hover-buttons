@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hover Buttons</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <style>
+      .animEnter:hover {
+        transition: background-color 0.5s;
+      }
+      .animEnter:hover {
+        background-color: #67cdfe;
+      }
+
+      .animBoth {
+        transition: background-color 0.5s;
+      }
+      .animBoth:hover {
+        background-color: #67cdfe;
+      }
+
+      .animExit:not(:hover) {
+        transition: background-color 0.5s;
+      }
+      .animExit:hover {
+        background-color: #67cdfe;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        <p>Animate only on enter</p>
+        <div class="button animEnter">Hover me!</div>
+        <pre>
+.animEnter:hover {
+    transition: background-color 0.5s;
+}
+
+.animEnter:hover {
+    background-color: #67cdfe;
+}</pre
+        >
+      </div>
+      <div>
+        <p>Animate for both events</p>
+        <div class="button animBoth">Hover me!</div>
+        <pre>
+.animBoth {
+    transition: background-color 0.5s;
+}
+
+.animBoth:hover {
+    background-color: #67cdfe;
+}</pre
+        >
+      </div>
+      <div>
+        <p>Animate only on exit</p>
+        <div class="button animExit">Hover me!</div>
+        <pre>
+.animExit:not(:hover) {
+    transition: background-color 0.5s;
+}
+
+.animExit:hover {
+    background-color: #67cdfe;
+}</pre
+        >
+      </div>
+    </div>
+  </body>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      color: #adadad;
+    }
+
+    body {
+      background: #1e1e1e;
+      font-family: "Open Sans";
+    }
+
+    #container {
+      min-height: 100vh;
+      max-width: 1280px;
+
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: row;
+
+      justify-content: space-around;
+      align-items: center;
+
+      text-align: center;
+    }
+
+    #container > div {
+      margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 960px) {
+      #container {
+        flex-direction: column;
+      }
+
+      #container > div:not(:first-child) {
+        border-top: 1px solid #adadad;
+      }
+    }
+
+    .button {
+      cursor: pointer;
+      border: 2px solid #67cdfe;
+      border-radius: 2px;
+      padding: 5px;
+      text-align: center;
+      text-transform: uppercase;
+      user-select: none;
+      margin: 0 auto;
+      width: max-content;
+      color: #a7a7a7;
+    }
+
+    .button:hover {
+      color: white;
+    }
+
+    p {
+      user-select: none;
+      font-size: 1.5em;
+    }
+
+    pre {
+      text-align: initial;
+      user-select: all;
+      background-color: #333;
+      padding: 10px;
+    }
+  </style>
+  <!-- featherbear.github.io/hover-buttons -->
+</html>
